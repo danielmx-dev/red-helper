@@ -1,0 +1,22 @@
+{
+  "name": "red-helper",
+  "version": "0.0.1",
+  "description": "Redmine Helper",
+  "main": "horas.js",
+  "repository": {
+    "url": "https://github.com/dylanrevisited/red-helper.git"
+  },
+  "dependencies": {
+    "config": "^1.21.0",
+    "csv-parse": "^1.1.7",
+    "lodash": "^4.14.1",
+    "nightwatch": "^0.9.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node_modules/.bin/nightwatch tests/flow.js"
+  },
+  "author": "@dylanrevisited",
+  "license": "ISC"
+}
