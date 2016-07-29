@@ -51,6 +51,10 @@ const getFullDate = (rawDate, index) => {
 
   const dateParts = date.match(fullDateRegex);
   const dateRowInstance = new Date(dateParts[1], Number(dateParts[2]) - 1, dateParts[3]);
+  dateRowInstance.setHours(0);
+  dateNowInstance.setMinutes(0);
+  dateNowInstance.setSeconds(0);
+
   const dayOfTheWeek = dateRowInstance.getDay();
 
   assert(dateRowInstance <= dateNowInstance, `Invalid date ${date} in row: ${index} | The date must be today or in the past`);
