@@ -6,7 +6,7 @@ const timeEntries = getFileContents();
 
 this['before'] = function(browser) {
   browser
-    .url('${config.redmineBase}/login')
+    .url(`${config.redmineBase}/login`)
     .waitForElementVisible('input#username', 1000)
     .setValue('input#username', config.username)
     .setValue('input#password', config.password)
