@@ -11,7 +11,6 @@ this['before'] = function(browser) {
     .setValue('input#username', config.username)
     .setValue('input#password', config.password)
     .click('input[type=submit]')
-    .pause(10000)
     .assert.containsText('#content h2', 'My page');
 };
 

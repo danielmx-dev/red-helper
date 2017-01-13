@@ -61,7 +61,12 @@ const getFullDate = (rawDate, index) => {
   assert(dateNowInstance - dateRowInstance < THIRTY_DAYS, `Invalid date ${date} in row: ${index} | The date cannot be more than 30 days into the past`);
   assert(dayOfTheWeek !== SUNDAY && dayOfTheWeek !== SATURDAY, `Invalid date ${date} in row: ${index} | Cannot add a time entry on weekend`);
 
-  return date;
+  return formatDate(date);
+};
+
+const formatDate = date => {
+  const parts = date.split('-');
+  return `${parts[1]}/${parts[2]}/${parts[0]}`
 };
 
 const isValidDate = date =>
