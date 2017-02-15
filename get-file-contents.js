@@ -19,8 +19,8 @@ const validateAndUpdateRow = (row, i) => {
   assert(_.includes(REDMINE_ACTIVITIES, row.activity), `Invalid Redmine Activity '${row.activity}' in row: ${index} | Value must be one of: ${REDMINE_ACTIVITIES}`);
 
   const inputDate = row.date || lastDate;
+  lastDate = inputDate;
   row.date = getFullDate(inputDate, index);
-  lastDate = row.date;
   validateAccumulatedValue(row.date, row.hours, index);
 
   return row;
